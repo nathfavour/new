@@ -13,9 +13,9 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Your API',
+      title: 'CENSmart CARDS',
       version: '1.0.0',
-      description: 'API for managing cards',
+      description: 'fetch cards data below.',
     },
     servers: [
       {
