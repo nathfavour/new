@@ -27,6 +27,10 @@ const options = {
 };
 
 const specs = swaggerJsdoc(options);
+app.get('/cards', getAllCards); 
+
+
+const { getAllCards } = require('./cards'); 
 
 app.use('/', swaggerUi.serve, swaggerUi.setup(specs));
 
