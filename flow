@@ -1,0 +1,51 @@
+// index.js 
+// ... (other imports and setup)
+
+const options = {
+  // ... (other Swagger options)
+  definition: {
+
+
+
+    
+    // ... (other definition properties)
+    components: {
+      schemas: {
+        Card: {
+          type: 'object',
+          required: ['name', 'description'], // Name and description are mandatory
+          properties: {
+            name: {
+              type: 'string',
+              description: 'The name of the card',
+            },
+            description: {
+              type: 'string',
+              description: 'A description of the card',
+            },
+            svg: {
+              type: 'string',
+              description: 'The SVG content of the card',
+            },
+            // Add other properties as needed (e.g., color, tags, etc.)
+          },
+        },
+      },
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+  },
+  // ... (rest of Swagger options)
+};
+
+// ... (rest of your code)

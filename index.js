@@ -17,6 +17,31 @@ const options = {
       version: '1.0.0',
       description: 'fetch cards data below.',
     },
+
+    components: {
+      schemas: {
+        Card: {
+          type: 'object',
+          required: ['name', 'description'], // Name and description are mandatory
+          properties: {
+            name: {
+              type: 'string',
+              description: 'The name of the card',
+            },
+            description: {
+              type: 'string',
+              description: 'A description of the card',
+            },
+            svg: {
+              type: 'string',
+              description: 'The SVG content of the card',
+            },
+            // Add other properties as needed (e.g., color, tags, etc.)
+          },
+        },
+      },
+    },
+
     servers: [
       {
         url: '/', // This sets the base URL for your API to the root
