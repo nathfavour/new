@@ -7,7 +7,7 @@ import { CardsModel } from '../cards/cards.model';
 
 AdminBro.registerAdapter(AdminBroMongoose);
 
-const adminBroOptions: AdminBro.Options = {
+const adminBroOptions = {
   resources: [
     {
       resource: UserModel,
@@ -30,7 +30,5 @@ const adminBroOptions: AdminBro.Options = {
 const adminBro = new AdminBro(adminBroOptions);
 
 const router = AdminBroExpress.buildRouter(adminBro);
-
-// export { router as adminBroRouter };
 
 export default router;
