@@ -24,6 +24,8 @@ const adminBroOptions: AdminBro.Options = {
     },
   ],
   // other options...
+    rootPath: '/admin',
+
 };
 
 const adminBro = new AdminBro(adminBroOptions);
@@ -32,3 +34,6 @@ const router = AdminBroExpress.buildRouter(adminBro);
 
 // in your express app
 // app.use(adminBro.options.rootPath, router);
+
+// app.use(adminBro.options.rootPath, router)
+// app.listen(8080, () => console.log('AdminBro is under localhost:8080/admin'))
