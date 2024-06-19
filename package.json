@@ -41,6 +41,7 @@
     "@types/morgan": "^1.9.3",
     "admin-bro": "^4.0.1",
     "apicache": "^1.6.3",
+    "cors": "^2.8.5",
     "dotenv": "^14.3.2",
     "express": "^4.17.1",
     "express-http-context": "^1.2.4",

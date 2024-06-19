@@ -7,6 +7,9 @@ import cards from '@components/cards/cards.router';
 import adminBroRouter from '@components/adminbro/adminbro.router';
 
 const router: Router = Router();
+const cors = require('cors');
+
+router.use(cors());
 router.use(healthCheck);
 router.use(user);
 router.use(cards);
