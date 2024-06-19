@@ -96,7 +96,7 @@
       }
     },
 
-    "api/cards": {
+    "/api/cards": {
 
 
 
