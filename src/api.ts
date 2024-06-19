@@ -9,11 +9,11 @@ import adminBroRouter from '@components/adminbro/adminbro.router';
 const router: Router = Router();
 const cors = require('cors');
 
+router.use('/admin', adminBroRouter);
 router.use(cors());
 router.use(healthCheck);
 router.use(user);
 router.use(cards);
 // router.use(adminBro.options.rootPath, adminBroRouter);
-router.use('/admin', adminBroRouter);
 
 export default router;
