@@ -3,7 +3,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "Node Express Template -> (NET.ts) ",
+    "title": "CENSmart CARD API ",
     "description": "Node.js NET.ts RESTful API",
     "license": {
       "name": "MIT",
