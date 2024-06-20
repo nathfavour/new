@@ -31,4 +31,6 @@ const adminBro = new AdminBro(adminBroOptions);
 
 const router = AdminBroExpress.buildRouter(adminBro);
 
+// const router = AdminBroExpress.buildRouter(adminBro)
+
 export default router;
