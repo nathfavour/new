@@ -6,6 +6,7 @@ import {
   createCards,
   readCards,
   updateCards,
+  readAllCards,
   deleteCards,
 } from './cards.controller';
 import createCardsValidation from './createCards.validation';
@@ -19,11 +20,16 @@ router.post(
   createCards,
 );
 router.get('/cards/:id', readCards);
+
 router.put(
   '/cards/:id',
   [protectedByApiKey, validation(createCardsValidation)],
   updateCards,
 );
+
+router.get('/cards/', readAllCards);
+
 router.delete('/cards/:id', [protectedByApiKey], deleteCards);
+
 
 export default router;

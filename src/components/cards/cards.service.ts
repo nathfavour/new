@@ -49,4 +49,12 @@ const deleteById = async (id: string): Promise<boolean> => {
   return true;
 };
 
-export { create, read, update, deleteById };
+
+// read all data
+const readAll = async (): Promise<ICards[]> => {
+  const cards = await CardsModel.find({});
+  return cards;
+};
+
+
+export { create, read, update, deleteById, readAll };

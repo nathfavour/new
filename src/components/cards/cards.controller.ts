@@ -5,6 +5,7 @@ import {
   read,
   update,
   deleteById,
+  readAll,
 } from '@components/cards/cards.service';
 import { ICards } from '@components/cards/cards.interface';
 
@@ -33,5 +34,18 @@ const deleteCards = async (req: Request, res: Response) => {
   res.send({ message: 'Removed' });
 };
 
+
+const readAllCards = async (req: Request, res: Response) => {
+  const cards = await readAll(); // Assuming read function can be used without parameters to fetch all
+  res.status(httpStatus.OK).send({ message: 'All Cards Read', output: cards });
+};
+
+export { createCards, readCards, updateCards, deleteCards, readAllCards };
+
+// const readAllCards = async (req: Request, res: Response) => {
+//   const cards = await readAll(); // Assuming readAll is a function that fetches all cards
+//   res.status(httpStatus.OK).send({ message: 'Read All', output: cards });
+// };
+
 // export { createUser, readUser, updateUser, deleteUser };
-export { createCards, readCards, updateCards, deleteCards };
+// export { createCards, readCards, updateCards, deleteCards };
